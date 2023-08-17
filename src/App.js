@@ -8,6 +8,7 @@ import SecondPage from "./pages/SecondPage";
 import FrontendInternTask from "./pages/FrontendInternTask";
 import { useEffect } from "react";
 
+
 function App() {
   const action = useNavigationType();
   const location = useLocation();

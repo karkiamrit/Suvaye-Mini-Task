@@ -1,9 +1,11 @@
+import React from "react";
 import { useMemo } from "react";
 
 const Button = ({
   rectangle10,
   prop,
   showDiv,
+  redirectUrl, // Add this new prop for the redirect URL
   buttonPosition,
   buttonWidth,
   buttonHeight,
@@ -30,6 +32,7 @@ const Button = ({
       left: buttonLeft,
       transform: buttonTransform,
       transformOrigin: buttonTransformOrigin,
+      cursor: "pointer",
     };
   }, [
     buttonPosition,
@@ -67,10 +70,17 @@ const Button = ({
     };
   }, [divTop, divLeft, divFontWeight]);
 
+  const handleButtonClick = () => {
+    if (redirectUrl) {
+      window.location.href = redirectUrl; 
+    }
+  };
+
   return (
     <div
       className="relative w-[118px] h-[38px] text-center text-[16px] text-darkslategray-100 font-vazirmatn"
       style={buttonStyle}
+      onClick={handleButtonClick} 
     >
       <img
         className="absolute h-[110.53%] w-full top-[0%] right-[0%] bottom-[-10.53%] left-[0%] rounded-2xl max-w-full overflow-hidden max-h-full"
@@ -83,7 +93,6 @@ const Button = ({
           {prop}
         </div>
       )}
-      
     </div>
   );
 };

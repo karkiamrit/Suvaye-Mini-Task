@@ -1,3 +1,4 @@
+import { redirect } from "react-router-dom";
 import Button from "./Button";
 
 const Share = () => {
@@ -8,7 +9,7 @@ const Share = () => {
       <div className="absolute top-[106.11px] left-[602.04px] font-black [text-shadow:0px_5px_0px_rgba(0,_0,_0,_0.25)] [transform:_rotate(-3.18deg)] [transform-origin:0_0]">
         suvaye.official
       </div>
-      <div className="absolute top-[203.3px] left-[458.92px] text-5xl font-medium [transform:_rotate(-3.79deg)] [transform-origin:0_0] opacity-[0.9]">
+      <div className="absolute top-[203.3px] left-[458.92px] text-5xl font-medium [transform:_rotate(-3.79deg)] [transform-origin:0_0] opacity-[0.9]" >
         Follow us on twitter for latest updates
       </div>
       <div className="absolute top-[120px] left-[516px] w-[71.17px] h-[51.42px]">
@@ -33,6 +34,8 @@ const Share = () => {
             divTop="20.6%"
             divLeft="17.58%"
             divFontWeight="500"
+            redirectUrl="https://twitter.com" 
+
           />
           <img
             className="absolute top-[15px] left-[23px] w-[29px] h-6"

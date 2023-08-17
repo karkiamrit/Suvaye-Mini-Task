@@ -5,7 +5,6 @@ const displayBlock = (props) => {
     const [type, setType] = useState('noun');
     const [status, setStatus] = useState('play');
     const [audioElements, setAudioElements] = useState([]);
-    console.log(props.data)
     const handleClick = (e) => {
         setType(e.target.value);
     }
@@ -44,12 +43,12 @@ const displayBlock = (props) => {
             <Share />
             <div className="absolute top-[214px] left-[230px] w-[980px] h-[626px] font-text-xl-regular">
                 <div className="absolute top-[3px] left-[-1px] rounded-16xl bg-white shadow-[0px_2px_0px_#ced9e3] box-border w-[980px] h-[626px] border-[3px] border-solid border-lightgray" />
-                <img
+                {props.data.word && <img
                     className="absolute top-[39px] left-[17px] w-[61px] h-[61px] object-cover cursor-pointer"
                     alt=""
                     src={status === 'play' ? "/circled-play@2x.png" : "/pause-button@2x.png"}
                     onClick={handleAudioToggle}
-                />
+                />}
                 <div className="absolute top-[55px] left-[94px] leading-[30px] inline-block w-[119px] h-[26px]">
                     {props.data.phonetic}
                 </div>
@@ -68,7 +67,7 @@ const displayBlock = (props) => {
                         ) : null}
                     </ul>
                 </div>
-                <div className="absolute top-[126px] left-[31px] bg-gainsboro rounded-8xs w-[93px] h-[33px] overflow-hidden text-center">
+                {props.data.word && <div className="absolute top-[126px] left-[31px] bg-gainsboro rounded-8xs w-[93px] h-[33px] overflow-hidden text-center">
                     <button
                         className={`w-full h-full focus:outline-none font-medium text-xl ${type === "noun" ? "bg-black text-white" : "bg-transparent"
                             }`}
@@ -77,9 +76,9 @@ const displayBlock = (props) => {
                     >
                         noun
                     </button>
-                </div>
+                </div>}
                 
-                <div className="absolute top-[126px] left-[137px] bg-gainsboro rounded-8xs w-[93px] h-[33px] overflow-hidden text-center">
+                {props.data.word && <div className="absolute top-[126px] left-[137px] bg-gainsboro rounded-8xs w-[93px] h-[33px] overflow-hidden text-center">
                     <button
                         className={`w-full h-full focus:outline-none font-medium text-xl ${type === "verb" ? "bg-black text-white" : "bg-transparent"
                             }`}
@@ -88,7 +87,7 @@ const displayBlock = (props) => {
                     >
                         verb
                     </button>
-                </div>
+                </div>}
             </div>
         </div>
     )
