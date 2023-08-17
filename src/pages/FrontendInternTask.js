@@ -5,8 +5,12 @@ import axios from 'axios';
 
 const FrontendInternTask = () => {
   const [data,setData]=useState([]);
+  const [keyword,setKeyword]=useState(null);
+
   const handleSearch=async(e)=>{
      const search=e.target.value;
+     setKeyword(search);
+
      try {
       const response = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en/${search}`);
       setData(response.data[0]);
@@ -18,8 +22,8 @@ const FrontendInternTask = () => {
 
   return (
     
-    <div>
-      <DisplayBlock data={data} />
+    <div className="relative bg-white w-full h-[1511px] overflow-hidden text-left text-xl text-black font-vazirmatn">
+      {keyword!=null && keyword!='' && <DisplayBlock data={data} />}
       <Nav
         imageAltText="/nighmode1.svg"
         searchResultText="Search"
