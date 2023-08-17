@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { useDataContext } from '../components/DataContext';
 import DisplayBlock from '../components/displayBlock';
-// import Share from "../components/Share";
+import Share from "../components/Share";
 import Nav from "../components/Nav";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -25,8 +25,9 @@ const FrontendInternTask = () => {
   return (
 
     <div className="relative bg-white w-full h-[1511px] overflow-hidden text-left text-xl text-black font-vazirmatn">
-
+      
       <DisplayBlock data={data} />
+      <Share />
       <Nav
         imageAltText="/nighmode1.svg"
         searchResultText="Search"

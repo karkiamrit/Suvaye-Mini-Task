@@ -13,15 +13,17 @@ const Share = () => {
         Follow us on twitter for latest updates
       </div>
       <div className="absolute top-[120px] left-[516px] w-[71.17px] h-[51.42px]">
+        <a href='https://twitter.com'>
         <div className="absolute top-[0px] left-[0px] w-[71.17px] h-[51.42px]">
+          
           <Button
             rectangle10="/rectangle-101.svg"
-            prop="تییوت"
+            prop="123"
             showDiv={false}
             buttonPosition="absolute"
             buttonWidth="67.54px"
             buttonHeight="45.88px"
-            buttonTop="5.71px"
+            buttonTop="12.71px"
             buttonLeft="0px"
             buttonTransform=" rotate(-4.85deg)"
             buttonTransformOrigin="0 0"
@@ -34,7 +36,7 @@ const Share = () => {
             divTop="20.6%"
             divLeft="17.58%"
             divFontWeight="500"
-            redirectUrl="https://twitter.com" 
+            // redirectUrl="https://twitter.com" 
 
           />
           <img
@@ -43,13 +45,16 @@ const Share = () => {
             src="/vector1.svg"
           />
         </div>
+        </a>
       </div>
       <img
         className="absolute top-[-55px] left-[54px] w-[300px] h-[301px] object-cover"
         alt=""
         src="/group-6-2-2@2x.png"
       />
+      
     </div>
+    
   );
 };
 

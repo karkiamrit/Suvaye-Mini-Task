@@ -112,15 +112,13 @@ const Nav = ({
           <div
             className="absolute top-[0%] left-[0%] font-black"
             style={divStyle}
-          >
-            هژاو
-          </div>
+          />
+            
+          
         )}
       </div>
       {divVisible && (
-        <div className="absolute h-[43.59%] w-[3.95%] top-[30%] left-[64.03%] flex items-center justify-center opacity-[0.6]">
-          هرابرد
-        </div>
+        <div className="absolute h-[43.59%] w-[3.95%] top-[30%] left-[64.03%] flex items-center justify-center opacity-[0.6]"/>
       )}
       {divVisible1 && (
         <div className="absolute h-[43.59%] w-[5.24%] top-[30%] left-[73.39%] text-deepskyblue-200 flex items-center justify-center">
@@ -139,9 +137,9 @@ const Nav = ({
         </div>
       )}
       {divVisible3 && (
-        <div className="absolute h-[43.59%] w-[8.63%] top-[30%] left-[50%] flex items-center justify-center opacity-[0.6]">
-          یلام تیامح
-        </div>
+        <div className="absolute h-[43.59%] w-[8.63%] top-[30%] left-[50%] flex items-center justify-center opacity-[0.6]"/>
+
+        
       )}
       <div
         className="absolute h-[10%] w-[9.03%] top-[0%] right-[19.52%] bottom-[90%] left-[71.45%]"

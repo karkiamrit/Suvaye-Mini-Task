@@ -1,5 +1,5 @@
 import React from 'react';
-import Share from "../components/Share";
+// import Share from "../components/Share";
 import { useState } from 'react';
 const displayBlock = (props) => {
     const [type, setType] = useState('noun');
@@ -40,7 +40,6 @@ const displayBlock = (props) => {
     
     return (
         <div className="relative bg-white w-full h-[1511px] overflow-hidden text-left text-xl text-black font-vazirmatn">
-            <Share />
             <div className="absolute top-[214px] left-[230px] w-[980px] h-[626px] font-text-xl-regular">
                 <div className="absolute top-[3px] left-[-1px] rounded-16xl bg-white shadow-[0px_2px_0px_#ced9e3] box-border w-[980px] h-[626px] border-[3px] border-solid border-lightgray" />
                 {props.data.word && <img

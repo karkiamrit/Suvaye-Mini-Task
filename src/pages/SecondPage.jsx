@@ -10,11 +10,11 @@ const SecondPage = () => {
 
   return (
     <div>
-      
-      <DisplayBlock data={displayBlockData} />
-      <div className="absolute top-[136px] left-[239px] text-[30px] leading-[30px] font-medium inline-block w-[713px] font-vazirmatn text-black">
+
+      {displayBlockData ? <DisplayBlock data={displayBlockData} />: <p className="absolute top-[136px] left-[239px] text-[30px] leading-[30px] font-medium inline-block w-[713px] font-vazirmatn text-black ">Nothing to Show</p> }
+      {displayBlockData && <div className="absolute top-[136px] left-[239px] text-[30px] leading-[30px] font-medium inline-block w-[713px] font-vazirmatn text-black">
         Word: {displayBlockData.word}
-      </div>
+      </div>}
     </div>
 
   );
