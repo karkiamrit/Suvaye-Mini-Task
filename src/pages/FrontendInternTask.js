@@ -1,19 +1,25 @@
 import Nav from "../components/Nav";
 import { useState } from "react";
 import DisplayBlock from "../components/displayBlock";
+import axios from 'axios';
 
 const FrontendInternTask = () => {
-  const [searchvalue,setSearchValue]=useState("");
-  function handleSearch(e){
+  const [data,setData]=useState([]);
+  const handleSearch=async(e)=>{
      const search=e.target.value;
-     setSearchValue(search);
-     console.log(searchvalue)
+     try {
+      const response = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en/${search}`);
+      setData(response.data[0]);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+     
   }
 
   return (
     
     <div>
-      <DisplayBlock search={searchvalue} />
+      <DisplayBlock data={data} />
       <Nav
         imageAltText="/nighmode1.svg"
         searchResultText="Search"
