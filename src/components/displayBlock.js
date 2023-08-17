@@ -1,7 +1,12 @@
-const SecondPage = () => {
+import React from 'react';
+import Share from "../components/Share";
+import axios from 'axios';
+const displayBlock = (props) => {
+  
   return (
-    <div className="relative bg-white w-full h-[982px] overflow-hidden text-left text-xl text-black font-text-xl-regular">
-      <div className="absolute top-[214px] left-[230px] w-[980px] h-[626px] overflow-x-auto">
+    <div className="relative bg-white w-full h-[1511px] overflow-hidden text-left text-xl text-black font-vazirmatn">
+      <Share />
+      <div className="absolute top-[214px] left-[230px] w-[980px] h-[626px] overflow-x-auto font-text-xl-regular">
         <div className="absolute top-[3px] left-[-1px] rounded-16xl bg-white shadow-[0px_2px_0px_#ced9e3] box-border w-[980px] h-[626px] border-[3px] border-solid border-lightgray" />
         <img
           className="absolute top-[39px] left-[17px] w-[61px] h-[61px] object-cover"
@@ -36,11 +41,8 @@ const SecondPage = () => {
           </div>
         </div>
       </div>
-      <div className="absolute top-[136px] left-[239px] text-[30px] leading-[30px] font-medium inline-block w-[713px]">
-        Word: Apple
       </div>
-    </div>
-  );
-};
+  )
+}
 
-export default SecondPage;
+export default displayBlock;
